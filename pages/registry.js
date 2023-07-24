@@ -84,7 +84,7 @@ function Index() {
 
   return (
     <div className={styles.indexContainer}>
-      <h2 className={styles.registryTitle}>Liste de naissance</h2>
+      <h2 className={styles.registryTitle}>La liste de naissance</h2>
       <CategoryButtons
         onPress={handleCategory}
         categories={[

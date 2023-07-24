@@ -6,7 +6,7 @@ function Kitty() {
     window.open(url, "_blank", "noreferrer");}
   return (
     <div className={styles.container}>
-      <p>Participation libre à la cagnotte</p>
+      <h3 className={styles.kittyTitle}>Participation libre à la cagnotte</h3>
 
       <div className={styles.buttonsContainer}>
         <button style={{backgroundColor : "#fbd344"}} className={styles.payButton} 

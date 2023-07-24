@@ -2,7 +2,7 @@
   width: 44vw;
   height: auto;
   min-height: 128px;
-  margin: 6px 0;
+  margin:10px 0;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 2px 2px 4px 1px rgba(88, 88, 88, 0.322);
@@ -77,3 +77,7 @@ flex-direction: column;
 .title, .price {
 font-weight: 600;
 font-size: 1.1rem;}
+
+.seller{
+  display: none;
+}

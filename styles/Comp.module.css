@@ -71,9 +71,20 @@
   flex-direction: column;
   align-items: center;
   margin: 3rem 0;
-height: calc(100vh - 410px);
+height: calc(100vh - 375px);
 }
 
 .addressElements{
   text-align: center;
 }
+
+  .potContainer{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 3rem 0; */
+  min-height: calc(100vh - 375px);
+  padding: 3vw;
+  font-size: 0.9rem;
+  }

@@ -4,8 +4,8 @@ import MainButton from "../components/MainButton";
 import { useState } from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Divider from "@mui/material/Divider";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGift, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGift, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router"; // Import the useRouter hook
 import BookingModal from "../components/BookingModal";
 import UnbookModal from "../components/UnbookModal";
@@ -74,10 +74,10 @@ const item = useSelector((state) => state.item.value.selectedItem);
             <MainButton
               text={
                 <>
-                  {/* <FontAwesomeIcon
+                  <FontAwesomeIcon
                     icon={faXmark}
                     style={{ marginRight: "1em" }}
-                  /> */}
+                  />
                   {"Annuler la réservation"}
                 </>
               }
@@ -99,11 +99,11 @@ const item = useSelector((state) => state.item.value.selectedItem);
             <MainButton
               text={
                 <>
-                  {/* <FontAwesomeIcon
+                  <FontAwesomeIcon
                     icon={faGift}
                     style={{ marginRight: "1em" }}
-                  /> */}
-                  {"Acheter le cadeau"}
+                  />
+                  {"Offrir le cadeau"}
                 </>
               }
               color="green"

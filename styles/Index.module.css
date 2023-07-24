@@ -1,15 +1,15 @@
-.itemsContainer{
+.itemsContainer {
   width: 100%;
   /* border: solid 1px green; */
-padding: 0 3vw;
-display: flex;
-justify-content: space-between;
-align-items:flex-start;
-flex-wrap: wrap;
-margin: 8px 0
+  padding: 0 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 8px 0;
 }
 
-.indexContainer{
+.indexContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,13 +17,13 @@ margin: 8px 0
 
 .divider {
   color: black;
-  border: solid 1px black;
 }
 
-.registryTitle{
-  margin: 3vh 3vh 0 3vh;
-  font-size: 2rem;
+.registryTitle {
+  margin: 3vw 3vw 0 3vw;
+  font-size: 1.5rem;
   font-family: Poppins, Parisienne, sans-serif;
-  font-weight: 600
-  ;
+  font-weight: 500;
+  width: 100%;
+  padding: 0 3vw;
 }
