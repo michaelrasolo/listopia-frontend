@@ -13,7 +13,7 @@ export default function UnbookModal(props) {
   const router = useRouter(); // Get the useRouter instance
   const [email, setEmail] = useState("");
   const [resaCanceled, setResaCanceled] = useState(false);
-  const itemId = useSelector((state) => state.item.value.selectedItem._id);
+  const itemId = useSelector((state)=> state.item.value.selectedItem._id);
   const emailPattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}";
   const [error, setError] = useState(false);
 

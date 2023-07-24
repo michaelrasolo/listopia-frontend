@@ -11,7 +11,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router"; // Import the useRouter hook
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 export default function BookingModal(props) {
   const router = useRouter(); // Get the useRouter instance
   const [gifter, setGifter] = useState("");

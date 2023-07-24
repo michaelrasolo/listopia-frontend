@@ -23,11 +23,11 @@ const item = useSelector((state) => state.item.value.selectedItem);
   };
 
   useEffect(() => {
-    // if (item.itemName == null) {
-    //   router.push("/"); 
-    // } else {
+    if (item.itemName == null) {
+      router.push("/"); 
+    } else {
       setBooked(item.booked);
-    // }
+    }
   }, [item.itemName, router]);
 
   return (
