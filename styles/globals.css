@@ -1,10 +1,25 @@
+/* Import the Parisienne font from @fontsource/parisienne */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/* Import the Poppins font from @fontsource/poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", sans-serif;
+    background-color: #FEF8F0;
+  color: #335C67;
+  overflow: visible;
+  background-image: url("../public/Background.png");
+  background-position: bottom;
+background-attachment: fixed;
+font-size: 16px;
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing:border-box;
+  padding: 0;
+  margin: 0;
 }
+

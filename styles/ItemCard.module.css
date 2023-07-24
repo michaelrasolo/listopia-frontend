@@ -1,0 +1,79 @@
+.cardContainer {
+  width: 44vw;
+  height: auto;
+  min-height: 128px;
+  margin: 6px 0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px 1px rgba(88, 88, 88, 0.322);
+display: flex;
+flex-direction: column;
+transition: 0.2s;
+text-decoration: none;
+color: #335C67;
+;
+}
+
+.cardContainer:hover{
+    transform: scale(1.01, 1.01);
+}
+.cardContainer:active{
+    transform: scale(1.02, 1.02);
+}
+/* Image */
+.picContainer {
+  position: relative;
+  /* border: solid 1px green; */
+  width: 44vw;
+  height: 44vw;
+}
+
+.itemPic {
+    width: 100%;
+    height: 100%;
+  object-fit: cover;
+  /* border: solid 1px red; */
+}
+.reservedItem {
+  background-color: white;
+  border-radius: 30px;
+  border: solid 1px #335C67;
+  width: 50%;
+  max-width: 148px;
+  min-width: 116px;
+  padding: 4px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+}
+
+/* Text */
+
+.descContainer {
+  padding: .75rem;
+  display: flex;
+  background: rgba(255, 255, 255, 0.25);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+display: flex;
+flex-direction: column;
+}
+
+.title {
+    width: 100%;
+}
+
+.itemDetails{
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.title, .price {
+font-weight: 600;
+font-size: 1.1rem;}

@@ -1,0 +1,42 @@
+.container {
+    width: 50vw;
+    height: auto;
+    min-width: 300px;
+    padding: 3vh;
+    margin: 1rem;
+    display: flex;
+    background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid #335C67;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  }
+  .buttonsContainer{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.payButton{
+    padding: 4px 14px;
+    border-radius: 20px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+}
+  .payImg{
+    width: 96px;
+    height: 28px;
+    object-fit: cover;
+    /* border: solid black 1px; */
+    background-color: rgba(0, 0, 0, 0);
+  }

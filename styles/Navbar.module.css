@@ -1,0 +1,34 @@
+.navbarContainer {
+  height: 10vh;
+  max-height: 100px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 3vw;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+  font-family: "Parisienne", "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #335C67;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+
+.logoIcon{
+    height: 2rem;
+    width: auto;
+    transform: rotate(10deg);
+    margin-right: 6px;
+}
