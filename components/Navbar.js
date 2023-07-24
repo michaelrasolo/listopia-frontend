@@ -3,7 +3,7 @@ import SideMenu from "./SideMenu";
 import { useState } from "react";
 import Menu from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
-
+import Link from "next/link";
 function Navbar() {
   const [menuState, setMenuState] = useState(false);
 
@@ -23,8 +23,7 @@ function Navbar() {
 
       <div className={styles.logoBox}>
         <h1 className={styles.logo}>
-        <img src="strollerIcon.png" alt="stroller icon" className={styles.logoIcon}/>
-          Listopia
+         Listopia 
         
         </h1>
       </div>

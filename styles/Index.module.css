@@ -19,3 +19,11 @@ margin: 8px 0
   color: black;
   border: solid 1px black;
 }
+
+.registryTitle{
+  margin: 3vh 3vh 0 3vh;
+  font-size: 2rem;
+  font-family: Poppins, Parisienne, sans-serif;
+  font-weight: 600
+  ;
+}

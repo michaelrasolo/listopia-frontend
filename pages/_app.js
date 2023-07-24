@@ -12,6 +12,7 @@ const store = configureStore({
 function App({ Component, pageProps }) {
 
   return (
+    
     <Provider store={store}>
       <Head>
         <title>Listopia - la wishlist pour les futurs darons</title>

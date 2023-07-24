@@ -22,8 +22,8 @@ export default function SideMenu(props) {
       sx={{ width: 250, height: "100vh", backgroundColor: "#FEF8F0" }}
       role="presentation"
     >
-      <List sx={{ width: 250 }}>
-        <h1 className={styles.logo}>Listopia</h1>{" "}
+      <List sx={{ width: 250, textAlign:"center" }}>
+      <img src="strollerIcon.png" alt="stroller icon" className={styles.logoIcon}/>
         <Link href="/" style={{ textDecoration: "none", color: "#44433e" }}>
           <ListItem disablePadding>
             <ListItemButton>

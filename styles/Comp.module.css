@@ -30,10 +30,11 @@
   background-color: #335c67;
   margin-top: 5vh;
   width: 100%;
-  padding: 20%;
+  padding: 70px 0;
   text-align: center;
-  /* border: 1px solid red; */
   color: #fef8f0;
+  
+  
 }
 
 .copyright {
@@ -65,8 +66,14 @@
 }
 
 .addressBox{
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem;
+  margin: 3rem 0;
+height: calc(100vh - 410px);
+}
+
+.addressElements{
+  text-align: center;
 }
