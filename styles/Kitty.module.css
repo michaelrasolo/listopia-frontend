@@ -1,5 +1,5 @@
 .container {
-    width: 60vw;
+    width: 70vw;
     height: auto;
     min-width: 300px;
     padding: 3vh;
@@ -16,15 +16,17 @@
   /* align-items: center; */
 }
 
-  .kittyTitle{
-    text-align: center;
-    font-weight: 600;
-    font-size: 1rem;
-  }
+.kittyTitle{
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
   .buttonsContainer{
     margin-top: 5%;
     width: 100%;
     display: flex;
+    /* border: 1px solid #335C67; */
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
@@ -34,6 +36,7 @@
     border-radius: 20px;
     height: 36px;
     width: 148px;
+    min-width: 128px;
     display: flex;
     align-items: center;
     justify-content: center;
