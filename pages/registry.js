@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectItem } from "../reducers/item";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function Index() {
   const router = useRouter();
@@ -97,8 +98,11 @@ function Index() {
         ]}
       />
       {loading ? (
-        <p>loading...</p>
-      ) : (
+       <div className={styles.indexContainer}>
+       <CircularProgress style={{ color: "#335c67", margin: "3vh" }} />
+       <p>Attends, ça arrive lourd !</p>
+     </div>
+            ) : (
       // <></>
         <main className={styles.itemsContainer}>{itemDisplay}</main>
       )}{" "}
