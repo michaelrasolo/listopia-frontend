@@ -7,6 +7,7 @@ function adresse() {
         <div className={styles.addressElements}>Marie et Michaël RASOLONJATOVO</div>
         <div className={styles.addressElements}>45 boulevard de Montmorency</div>
         <div className={styles.addressElements}>75016 Paris</div>
+        <div className={styles.addressElements}>06.66.44.60.96 / 06.84.85.60.32</div>
     </section>
   );
 }

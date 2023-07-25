@@ -1,6 +1,4 @@
-import Home from "../components/Home";
 import ItemCard from "../components/ItemCard";
-import Kitty from "../components/Kitty";
 import styles from "../styles/Index.module.css";
 import CategoryButtons from "../components/CategoryButtons";
 import { useEffect, useState } from "react";
@@ -89,6 +87,7 @@ function Index() {
         onPress={handleCategory}
         categories={[
           "Liste complète",
+          "Les indispensables",
           "Bain & Santé",
           "Chambre",
           "Repas",

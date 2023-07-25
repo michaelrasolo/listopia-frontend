@@ -97,6 +97,7 @@ function Index() {
         onPress={handleCategory}
         categories={[
           "Liste complète",
+          "Les indispensables",
           "Bain & Santé",
           "Chambre",
           "Repas",

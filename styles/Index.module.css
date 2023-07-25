@@ -21,9 +21,10 @@
 
 .registryTitle {
   margin: 3vw 3vw 0 3vw;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: Poppins, Parisienne, sans-serif;
   font-weight: 500;
   width: 100%;
   padding: 0 3vw;
+  text-align: center;
 }
