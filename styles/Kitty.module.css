@@ -2,6 +2,7 @@
     width: 70vw;
     height: auto;
     min-width: 300px;
+    max-width: 450px;
     padding: 3vh;
     margin: 1rem;
     display: flex;
