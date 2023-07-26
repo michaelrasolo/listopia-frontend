@@ -85,7 +85,7 @@ function article() {
                 <>
                   <FontAwesomeIcon
                     icon={faXmark}
-                    style={{ marginRight: "1em", fontSize: "1.2rem" }}
+                    style={{ marginRight: "1em", fontSize: "14px" }}
                   />
                   {"Annuler la réservation"}
                 </>
@@ -110,7 +110,7 @@ function article() {
                 <>
                   <FontAwesomeIcon
                     icon={faGift}
-                    style={{ marginRight: "1em" , fontSize: "1.2rem"}}
+                    style={{ marginRight: "1em" , fontSize: "14px"}}
                   />
                   {"Offrir le cadeau"}
                 </>
