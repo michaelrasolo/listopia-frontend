@@ -20,7 +20,7 @@
 .itemInfo{
  display:flex;
  justify-content: space-between;
- padding: 3vh;
+ padding: vw;
 }
 .itemTitles{
 display: flex;

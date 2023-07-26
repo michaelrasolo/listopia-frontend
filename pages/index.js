@@ -87,7 +87,7 @@ function Index() {
     <div className={styles.indexContainer}>
       <Home
         p1="Bonjour à tous !
-        Petit bébé se prépare à rencontrer ses parents, leur famille et leurs amis à partir du 26 septembre 2023.✨ "
+        Bubulle se prépare à rencontrer ses parents, leur famille et leurs amis à partir du 26 septembre 2023.✨ "
         p2="Si vous souhaitez nous faire plaisir et nous aider à l'accueillir au mieux, vous trouverez une liste d'idées de cadeaux pour bébé, ainsi qu'une cagnotte."
         p3="Nous vous remercions pour vos belles attentions. 
         A très vite,"
