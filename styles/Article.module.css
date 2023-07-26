@@ -78,6 +78,8 @@ flex-direction: column;
     padding: 3vw;
     border-radius: 3rem;
     min-height: 250px;
+    max-width: 412px;
+    max-height: 412px;
 
   }
   .itemHeader{

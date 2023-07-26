@@ -83,10 +83,7 @@ function article() {
             <MainButton
               text={
                 <>
-                  <FontAwesomeIcon
-                    icon={faXmark}
-                    style={{ marginRight: "1em", fontSize: "14px" }}
-                  />
+                  {/* <FF */}
                   {"Annuler la réservation"}
                 </>
               }
@@ -108,10 +105,10 @@ function article() {
             <MainButton
               text={
                 <>
-                  <FontAwesomeIcon
+                  {/* <FontAwesomeIcon
                     icon={faGift}
                     style={{ marginRight: "1em" , fontSize: "14px"}}
-                  />
+                  /> */}
                   {"Offrir le cadeau"}
                 </>
               }
