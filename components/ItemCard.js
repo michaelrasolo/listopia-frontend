@@ -11,7 +11,9 @@ function ItemCard(props) {
       <img className={styles.itemPic} src={props.image} alt={props.itemName} />
         {props.booked && (
           <div className={styles.reservedItem}>
-            <Verified sx={{ fontSize: 24, marginRight: 1 }} /> Réservé
+            <Verified className={styles.bookingBadge}
+            // sx={{ fontSize: 24, marginRight: 1 }}
+             /> Réservé
           </div>
         )}
       </div>

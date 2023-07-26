@@ -17,14 +17,14 @@ function article() {
   const [booked, setBooked] = useState(false);
   const [openBooking, setOpenBooking] = useState(false);
   const [openUnbooking, setOpenUnbooking] = useState(false);
-const item = useSelector((state) => state.item.value.selectedItem);
+  const item = useSelector((state) => state.item.value.selectedItem);
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noreferrer");
   };
 
   useEffect(() => {
     if (item.itemName == null) {
-      router.push("/"); 
+      router.push("/");
     } else {
       setBooked(item.booked);
     }
@@ -32,28 +32,37 @@ const item = useSelector((state) => state.item.value.selectedItem);
 
   return (
     <main>
-      <img src={item.image} alt={item.itemName} className={styles.itemPic} />
       <div className={styles.articleContainer}>
         <div className={styles.itemHeader}>
-          <div className={styles.itemTitles}>
-            <h2 className={styles.h2}>{item.itemName}</h2>
-            <h3
-              className={styles.dealer}
-              onClick={() => openInNewTab(item.url)}
-            >
-              {item.dealer}
-            </h3>
+          <img
+            src={item.image}
+            alt={item.itemName}
+            className={styles.itemPic}
+          />
+          <div className="div">
+
+          <div className={styles.itemInfo}>
+            <div className={styles.itemTitles}>
+              <h2 className={styles.h2}>{item.itemName}</h2>
+              <h3
+                className={styles.dealer}
+                onClick={() => openInNewTab(item.url)}
+              >
+                {item.dealer}
+              </h3>
+            </div>
+            <h2 className={styles.h3} style={{ marginLeft: "3vh" }}>
+              {item.price}€
+            </h2>
           </div>
-          <h2 className={styles.h2} style={{ marginLeft: "3vh" }}>
-            {item.price}€
-          </h2>
-        </div>
         {item.desc == null ? (
           <></>
-        ) : (
-          <p className={styles.itemDesc}>{item.desc}</p>
-        )}
-        <div className={styles.itemInfos}>
+          ) : (
+            <p className={styles.itemDesc}>{item.desc}</p>
+            )}
+          </div>
+            </div>
+        <div className={styles.itemExtLink}>
           <MainButton
             text={
               <>

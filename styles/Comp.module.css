@@ -5,10 +5,9 @@
   border-radius: 20px;
   color: #fef8f0;
   margin: 5px;
-  width: auto;
-  max-width: 150px;
   height: 33px;
   text-align: center;
+  white-space: nowrap
 }
 
 .catButtons:focus,
@@ -22,8 +21,18 @@
 }
 
 .catBtnContainer {
-  padding: 3vw;
-  text-align: center;
+  border: solid 1px #335c67;
+  padding-left: 3vw;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  overflow-x: scroll; /* Enable horizontal scroll */
+  overflow-y: hidden; /* Disable vertical scroll */
+}
+
+.catBtnContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .footerContainer {
@@ -57,6 +66,7 @@
   align-items: center;
   justify-content: center;
   height: 40px;
+  max-width: 384px;
 }
 
 .mainBtn:focus,
@@ -89,4 +99,13 @@ height: calc(100vh - 375px);
   padding: 3vw;
   font-size: 0.9rem;
   /* height: 60vh; */
+  }
+
+  @media screen and  (min-width: 481px){
+    .catBtnContainer {
+      justify-content: center;
+width:90%;
+height: auto;
+flex-wrap: wrap;
+    }
   }

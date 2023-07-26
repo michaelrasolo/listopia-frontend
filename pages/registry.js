@@ -34,7 +34,7 @@ function Index() {
     fetchItems(); // Initial fetch when the component mounts
 
     const handleRouteChange = (url) => {
-      // If navigation to the Index page
+      // If navigation to the registry page
       if (url === router.asPath) {
         // Perform the re-fetch of items
         fetchItems();

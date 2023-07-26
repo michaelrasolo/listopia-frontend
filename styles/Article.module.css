@@ -1,23 +1,32 @@
 .itemPic {
   width: 100%;
-  max-height: 50vh;
+  /* max-height: 50vh; */
   object-fit: cover;
-  min-height: 300px;
 }
 
 .articleContainer {
-  padding: 3vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .itemHeader{
   display: flex;
+  flex-direction: column;
   /* border: solid 1px red; */
   justify-content: space-between;
   /* align-items: center; */
 }
-.itemInfos {
+.itemInfo{
+ display:flex;
+ justify-content: space-between;
+ padding: 3vh;
+}
+.itemTitles{
+display: flex;
+flex-direction: column;
+}
+.itemExtLink {
   padding: 3vw;
   display: flex;
   justify-content: center;
@@ -58,4 +67,27 @@
 .h3{
   font-weight: 500;
   margin-bottom: 1vh
+}
+/* RESPONSIVE TABLETS AND LARGER */
+@media screen and (min-width: 481px) {
+  .itemPic{
+    width: 45vw;
+    height: 45vw;
+    padding: 3vw;
+    border-radius: 3rem;
+    min-height: 250px;
+
+  }
+  .itemHeader{
+    flex-direction: row;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 480px) {
+  .itemPic{
+
+    min-height: 300px;
+
+  }
 }
