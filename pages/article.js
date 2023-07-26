@@ -39,7 +39,7 @@ function article() {
             alt={item.itemName}
             className={styles.itemPic}
           />
-          <div className="div">
+          <div className={styles.itemInfoContainer}>
 
           <div className={styles.itemInfo}>
             <div className={styles.itemTitles}>
@@ -51,7 +51,7 @@ function article() {
                 {item.dealer}
               </h3>
             </div>
-            <h2 className={styles.h3} style={{ marginLeft: "3vh" }}>
+            <h2 className={styles.h3} style={{ marginLeft: "4vw" }}>
               {item.price}€
             </h2>
           </div>
@@ -85,7 +85,7 @@ function article() {
                 <>
                   <FontAwesomeIcon
                     icon={faXmark}
-                    style={{ marginRight: "1em" }}
+                    style={{ marginRight: "1em", fontSize: "1.2rem" }}
                   />
                   {"Annuler la réservation"}
                 </>
@@ -110,7 +110,7 @@ function article() {
                 <>
                   <FontAwesomeIcon
                     icon={faGift}
-                    style={{ marginRight: "1em" }}
+                    style={{ marginRight: "1em" , fontSize: "1.2rem"}}
                   />
                   {"Offrir le cadeau"}
                 </>
