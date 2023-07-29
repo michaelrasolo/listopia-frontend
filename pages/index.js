@@ -105,6 +105,7 @@ function Index() {
           "Vêtements",
           "Jeux",
           "Sorties",
+          "Mom & Dad"
         ]}
       />
       {loading ? (
