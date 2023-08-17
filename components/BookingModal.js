@@ -18,46 +18,63 @@ export default function BookingModal(props) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [resaConfirmed, setResaConfirmed] = useState(false);
-  const itemId = useSelector((state) => state.item.value.selectedItem._id)
-  const emailPattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+  const itemId = useSelector((state) => state.item.value.selectedItem._id);
+  const item = useSelector((state) => state.item.value.selectedItem);
+  const emailPattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}";
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noreferrer");
   };
 
   const [error, setError] = useState(false);
-  const handleConfirm = () => {
+  const handleConfirm = async () => {
     // Console log the current States
     console.log(gifter, message, email, itemId);
     // Check for empty fields
-  if (!message || !gifter || !email) {
-    setError(true);
-    return; // Stop if empty field
-  }
+    if (!message || !gifter || !email) {
+      setError(true);
+      return; // Stop if empty field
+    }
 
-  // Check if the email has a valid format using a regular expression
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email.match(emailPattern)) {
-    setError(true);
-    return; // Stop if the email format is invalid
-  }
+    // Check if the email has a valid format using a regular expression
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.match(emailPattern)) {
+      setError(true);
+      return; // Stop if the email format is invalid
+    }
 
-  // API call if checks are passed
-    fetch("https://listopia-backend.vercel.app/items/book", {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        _id : itemId,
-        message,
-        gifter,
-        email,
+    try {
+      // API call if checks are passed
 
-      }),
-    })
-      .then((res) => res.json())
-      .then((response) => console.log("réponse du back: ", response.message))
-      .catch((error) => console.error("Erreur lors de la requête PUT :", error));
-;
-    setResaConfirmed(true);
+      // DB action to book the selected item
+      const response = await fetch(
+        "https://listopia-backend.vercel.app/items/book",
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            _id: itemId,
+            message,
+            gifter,
+            email,
+          }),
+        }
+      );
+
+      const emailToSend = await fetch("http://localhost:3001/api/email", {
+        method: 'POST',
+        body: JSON.stringify({
+          itemName:item.itemName,
+          gifter,
+          email
+        })
+      });
+
+      const data = await response.json();
+      console.log("réponse du back: ", data.message);
+      setResaConfirmed(true);
+    } catch (error) {
+      console.error("Erreur lors de la requête PUT :", error);
+    }
   };
 
   useEffect(() => {
@@ -87,8 +104,10 @@ export default function BookingModal(props) {
                 Votre nom
               </label>
               <input
-    className={`${styles.input} ${error && !gifter && styles.errorBorder}`}
-    placeholder="Bubulle"
+                className={`${styles.input} ${
+                  error && !gifter && styles.errorBorder
+                }`}
+                placeholder="Bubulle"
                 type="text"
                 id="name"
                 name="name"
@@ -100,8 +119,10 @@ export default function BookingModal(props) {
                 Votre email
               </label>
               <input
-    className={`${styles.input} ${error && !email.match(emailPattern) && styles.errorBorder}`}
-    placeholder="bubulle@baby.com"
+                className={`${styles.input} ${
+                  error && !email.match(emailPattern) && styles.errorBorder
+                }`}
+                placeholder="bubulle@baby.com"
                 type="email"
                 id="email"
                 required
@@ -113,7 +134,9 @@ export default function BookingModal(props) {
                 Votre message aux futurs parents
               </label>
               <textarea
-    className={`${styles.message} ${error && !message && styles.errorBorder}`}
+                className={`${styles.message} ${
+                  error && !message && styles.errorBorder
+                }`}
                 placeholder="Votre texte d'amour ici"
                 type="text"
                 id="text"
@@ -121,8 +144,9 @@ export default function BookingModal(props) {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-<p className={error ? styles.error : styles.noerror}>
-                Champ vide ou incorrect</p>
+              <p className={error ? styles.error : styles.noerror}>
+                Champ vide ou incorrect
+              </p>
               <Accordion sx={{ boxShadow: 0 }}>
                 <AccordionSummary
                   sx={{ p: 0 }}
@@ -139,7 +163,7 @@ export default function BookingModal(props) {
                 </AccordionDetails>
               </Accordion>
 
-              <p style={{ marginTop: "6px", fontSize:"0.75rem" }}>
+              <p style={{ marginTop: "6px", fontSize: "0.75rem" }}>
                 Je réserve le cadeau dans la liste, et je vais être redirigé
                 vers le site pour réaliser l'achat.
               </p>
