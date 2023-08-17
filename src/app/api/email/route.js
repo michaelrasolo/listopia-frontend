@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import Email from "../../../email/Email";
 import { NextResponse } from "next/server";
 
-const resend = new Resend("re_Do3NVvRz_3zg85xsuVrZvu2vLXcaJtcrM");
+const resend = new Resend(process.env.RESEND_KEY);
 export async function GET() {
   // try {
     
