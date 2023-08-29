@@ -21,8 +21,16 @@ function Index() {
     fetch(`https://listopia-backend.vercel.app/items/${category}`)
       .then((response) => response.json())
       .then((item) => {
-        console.log("fetched data", item);
-        setItemList(item.items);
+        const sortedItems = item.items.slice().sort((a, b) => {
+          if (a.booked && !b.booked) {
+            return 1; // a should come after b
+          }
+          if (!a.booked && b.booked) {
+            return -1; // a should come before b
+          }
+          return 0; // no change in order
+        });
+        setItemList(sortedItems);
         setLoading(false);
       })
       .catch((error) => {
@@ -68,16 +76,16 @@ function Index() {
   if (itemList.length > 0) {
     itemDisplay = itemList.map((item, i) => (
       <Link href="/article">
-      <ItemCard
-        key={i}
-        price={item.price}
-        itemName={item.itemName}
-        booked={item.booked}
-        image={item.image}
-        onClick={() => handleCardPress(item)}
-        dealer={item.dealer}
+        <ItemCard
+          key={i}
+          price={item.price}
+          itemName={item.itemName}
+          booked={item.booked}
+          image={item.image}
+          onClick={() => handleCardPress(item)}
+          dealer={item.dealer}
         />
-        </Link>
+      </Link>
     ));
   }
 
@@ -95,16 +103,16 @@ function Index() {
           "Vêtements",
           "Jeux",
           "Sorties",
-          "Mom & Dad"
+          "Mom & Dad",
         ]}
       />
       {loading ? (
-       <div className={styles.indexContainer}>
-       <CircularProgress style={{ color: "#335c67", margin: "3vh" }} />
-       <p>Attends, ça arrive lourd !</p>
-     </div>
-            ) : (
-      // <></>
+        <div className={styles.indexContainer}>
+          <CircularProgress style={{ color: "#335c67", margin: "3vh" }} />
+          <p>Attends, ça arrive lourd !</p>
+        </div>
+      ) : (
+        // <></>
         <main className={styles.itemsContainer}>{itemDisplay}</main>
       )}{" "}
     </div>

@@ -23,8 +23,16 @@ function Index() {
     fetch(`https://listopia-backend.vercel.app/items/${category}`)
       .then((response) => response.json())
       .then((item) => {
-        console.log("fetched data", item);
-        setItemList(item.items);
+        const sortedItems = item.items.slice().sort((a, b) => {
+          if (a.booked && !b.booked) {
+            return 1; // a should come after b
+          }
+          if (!a.booked && b.booked) {
+            return -1; // a should come before b
+          }
+          return 0; // no change in order
+        });
+                setItemList(sortedItems);
         setLoading(false);
       })
       .catch((error) => {
