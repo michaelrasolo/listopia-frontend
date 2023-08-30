@@ -17,7 +17,8 @@ function Index() {
   const [category, setCategory] = useState("");
   const [itemList, setItemList] = useState([]);
   const [loading, setLoading] = useState(true);
-  // FETCH ITEMS BY CATEGORY
+  
+  // FUNCTION FETCH ITEMS BY CATEGORY
   const fetchItems = () => {
     // Your fetch code to get items based on the selected category
     fetch(`https://listopia-backend.vercel.app/items/${category}`)
@@ -40,6 +41,8 @@ function Index() {
         setLoading(false);
       });
   };
+
+  // USE EFFECT INITIALISATION AND CATEGORY CHANGE
   useEffect(() => {
     fetchItems(); // Initial fetch when the component mounts
 

@@ -28,7 +28,7 @@ export default function BookingModal(props) {
   const [error, setError] = useState(false);
   const handleConfirm = async () => {
     // Console log the current States
-    console.log(gifter, message, email, itemId);
+    // console.log("Redux: ",gifter, message, email, itemId);
     // Check for empty fields
     if (!message || !gifter || !email) {
       setError(true);
