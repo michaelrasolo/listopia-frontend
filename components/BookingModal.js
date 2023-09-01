@@ -28,7 +28,7 @@ export default function BookingModal(props) {
   const [error, setError] = useState(false);
   const handleConfirm = async () => {
     // Console log the current States
-    // console.log("Redux: ",gifter, message, email, itemId);
+    console.log("Redux: ",gifter, message, email, itemId);
     // Check for empty fields
     if (!message || !gifter || !email) {
       setError(true);
@@ -60,18 +60,19 @@ export default function BookingModal(props) {
         }
       );
 
-      const emailToSend = await fetch("http://localhost:3001/api/email", {
-        method: 'POST',
-        body: JSON.stringify({
-          itemName:item.itemName,
-          gifter,
-          email
-        })
-      });
+      // const emailToSend = await fetch("http://localhost:3001/api/email", {
+      //   method: 'POST',
+      //   body: JSON.stringify({
+      //     itemName:item.itemName,
+      //     gifter,
+      //     email
+      //   })
+      // });
 
       const data = await response.json();
       console.log("réponse du back: ", data.message);
       setResaConfirmed(true);
+      console.log("state ResaConfirmed:", resaConfirmed);
     } catch (error) {
       console.error("Erreur lors de la requête PUT :", error);
     }
